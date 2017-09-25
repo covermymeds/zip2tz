@@ -5,7 +5,7 @@ require "zip2tz/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "zip2tz"
-  spec.version       = Zip2tz::VERSION
+  spec.version       = Zip2Tz::VERSION
   spec.authors       = ["Michael Gee", "Nathan Demick"]
   spec.email         = ["mgee@covermymeds.com", "ndemick@covermymeds.com"]
 
