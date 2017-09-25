@@ -30,7 +30,9 @@ module Zip2Tz
     America/Yakutat
   )
 
-  MAP = JSON.parse(File.read('data/map.json'))
+  MAP_PATH = Pathname.new(__dir__).parent.join('data', 'map.json')
+
+  MAP = JSON.parse(MAP_PATH.read)
 
   def self.lookup(zip)
     zip = zip.to_s
