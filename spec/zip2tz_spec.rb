@@ -5,7 +5,6 @@ RSpec.describe Zip2Tz do
     expect(Zip2Tz::VERSION).not_to be nil
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe 'looking up timezones by zip code' do
   end
 end

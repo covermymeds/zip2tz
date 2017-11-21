@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  app:
+    build: .
+    environment:
+      BUNDLE_PATH: /gems
+    volumes:
+      - .:/zip2tz
+      - gems:/gems
+
+volumes:
+  gems:
