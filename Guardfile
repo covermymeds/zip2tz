@@ -24,7 +24,14 @@
 #  * zeus: 'zeus rspec' (requires the server to be started separately)
 #  * 'just' rspec: 'rspec'
 
-guard :rspec, cmd: "bundle exec rspec" do
+rspec_opts = {
+  cmd:             'bin/rspec',
+  all_on_start:    true,
+  all_after_pass:  true,
+  failed_mode:     :keep
+}
+
+guard :rspec, rspec_opts do
   require "guard/rspec/dsl"
   dsl = Guard::RSpec::Dsl.new(self)
 
